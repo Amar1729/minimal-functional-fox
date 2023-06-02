@@ -1,3 +1,8 @@
+/*
+* Clone: https://github.com/MrOtherGuy/firefox-csshacks
+* Link/symlink chrome/autohide_sidebar.css here as userChrome-sidebery.css
+*/
+@import "userChrome-sidebery.css";
  :root {
 
    /* Minimal Functional Fox variables*/
