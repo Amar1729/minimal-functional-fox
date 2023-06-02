@@ -63,6 +63,8 @@
 /* This positions the tabs under the navaigator container */
 #titlebar {
   -moz-box-ordinal-group: 3 !important;
+  /* lmao just hide the entire titlebar: this is the window decorations and the tab container */
+  display: none !important;
 }
 
 .tabbrowser-tab::after,
@@ -136,6 +138,9 @@ width: 50% !important;
   margin-top: 4px !important;
   max-height: var(--mff-tab-height) !important;
   min-height: var(--mff-tab-height) !important;
+
+  /* can do this to hide the tabs from the titlebar, but the titlebar remains */
+  /* display: none !important; */
 }
 
 .tabbrowser-tab[soundplaying="true"] {
@@ -220,10 +225,12 @@ width: 50% !important;
 
 #back-button {
   list-style-image: url("left-arrow.svg") !important;
+  display: none !important;
 }
 
 #forward-button {
   list-style-image: url("right-arrow.svg") !important;
+  display: none !important;
 }
 
 toolbar {
@@ -281,8 +288,8 @@ toolbar#nav-bar {
 }
 
 #urlbar {
-  max-width: 70% !important;
-  margin: 0 15% !important;
+  max-width: 100% !important;
+  margin: 0 0% !important;
   /* 	position: unset!important; */;
 }
 
@@ -298,6 +305,11 @@ toolbar#nav-bar {
 
 toolbarbutton {
   box-shadow: none !important;
+}
+
+#page-action-buttons {
+  /* reader view, bookmark button */
+  display: none !important;
 }
 
 
