@@ -337,7 +337,8 @@ toolbarbutton {
 }
 
 #sidebar-box {
-  --sidebar-background-color: var(--mff-sidebar-bg) !important;
+  /* this only sets the sidebery clickable, not the entire sidebar box */
+  /* --sidebar-background-color: var(--mff-sidebar-bg) !important; */
 }
 
 splitter#sidebar-splitter {
@@ -351,6 +352,11 @@ splitter#sidebar-splitter {
 
 image#sidebar-icon {
   display: none;
+}
+
+.sidebar {
+  /* when this loads it seems to override whatever color i set? */
+  background-color: var(--mff-sidebar-bg) !important;
 }
 
 
