@@ -17,7 +17,7 @@
   --mff-sidebar-color: var(--color4);
   --mff-tab-border-radius: 0px;
   --mff-tab-color: #fefefa;
-  --mff-tab-font-family: "Iosevka Nerd Font Mono", sans;
+  --mff-tab-font-family: "Iosevka Etoile", sans-serif;
   --mff-tab-font-size: 11pt;
   --mff-tab-font-weight: 400;
   --mff-tab-height: 0px;
@@ -26,11 +26,11 @@
   --mff-tab-soundplaying-bg: #9c89b8;
   --mff-urlbar-color: var(--color4);
   --mff-urlbar-focused-color: var(--color5);
-  --mff-urlbar-font-family: "Iosevka Nerd Font Mono", serif;
+  --mff-urlbar-font-family: var(--mff-tab-font-family);
   --mff-urlbar-font-size: 12pt;
   --mff-urlbar-font-weight: 700;
   --mff-urlbar-results-color: var(--color5);
-  --mff-urlbar-results-font-family: "Iosevka Nerd Font Mono", serif;
+  --mff-urlbar-results-font-family: var(--mff-tab-font-family);
   --mff-urlbar-results-font-size: 12pt;
   --mff-urlbar-results-font-weight: 700;
   --mff-urlbar-results-url-color: var(--color4);
@@ -54,6 +54,13 @@
    |_/_/ \_\___/___/
 
 */
+
+#urlbar {
+    font-family: var(--mff-tab-font-family);
+    font-weight: var(--mff-tab-font-weight);
+    font-size: var(--mff-tab-font-size) !important;
+    color: var(--mff-tab-color);
+}
 
 .tab-background[selected="true"] {
   background: var(--mff-tab-selected-bg) !important;
@@ -167,6 +174,10 @@ width: 50% !important;
   |_| \___/ \___/|____|___/_/  \_\_|_\
 */
 
+.urlbar-input-box {
+  outline-color: white;
+}
+
 .urlbar-icon > image {
   fill: var(--mff-icon-color) !important;
   color: var(--mff-icon-color) !important;
@@ -229,7 +240,8 @@ width: 50% !important;
 
 #back-button {
   list-style-image: url("left-arrow.svg") !important;
-  display: none !important;
+  /* display: none !important; */
+  margin-left: 0% !important;
 }
 
 #forward-button {
@@ -292,13 +304,21 @@ toolbar#nav-bar {
 }
 
 #urlbar {
+  /* use 100 width/0 margin when keeping the back button visible */
   max-width: 100% !important;
-  margin: 0 0% !important;
-  /* 	position: unset!important; */;
+  margin: 0 0 0 0% !important;
+
+  /* margin-left: 5% !important; */
+  /* margin-right: 5% !important; */
+  outline-color: white !important;
+  border-color: white !important;
+  /* position: unset!important; */;
 }
 
 #urlbar-input:focus {
   color: var(--mff-urlbar-focused-color) !important;
+  outline-color: white !important;
+  border-color: white !important;
 }
 
 
